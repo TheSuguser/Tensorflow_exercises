@@ -21,7 +21,6 @@ num_input = 784 # Because figure size in dataset is 28*28
 
 # tf Graph input
 X = tf.placeholder(dtype = tf.float32, shape = ([None, num_input]))
-#X = tf.placeholder("float", [None, num_input])
 
 # Weight
 W = {
