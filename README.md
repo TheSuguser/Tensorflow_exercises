@@ -1,5 +1,5 @@
 # Tensorflow_exercises
-The project includes the basic tensorflow tutorial and some easy demos.
+The project includes the basic tensorflow tutorials and some easy demos.
 
 I will commit new demos with new material delivered by MSc Data Science and Machine Learning courses at UCL.
 
