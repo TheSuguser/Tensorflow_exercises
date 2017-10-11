@@ -11,9 +11,6 @@ learning_rate = 0.01
 num_training = 1000
 batch_size = 100
 
-display_step = 1000
-examples_to_show = 10
-
 # Neural Network Parameters
 num_hidden_1 = 256
 num_hidden_2 = 128
@@ -84,11 +81,11 @@ for i in range(0, num_training):
 
 
 # Testing
-n = 1
-pic_input = np.empty((n*28, n*28))
+num_pic = 1
+pic_input = np.empty((num_pic*28, num_pic*28))
 pic_output = pic_input
 
-batch_x, label = mnist.test.next_batch(n)
+batch_x, label = mnist.test.next_batch(num_pic)
 digit_output = sess.run(decoder_output, feed_dict = {X: batch_x})
 
 # Display the figures
@@ -96,10 +93,10 @@ pic_input = batch_x.reshape([28,28])
 pic_output = digit_output.reshape([28,28])
 
 # Show the figures
-plt.figure(1,figsize = (n,n))
+plt.figure(1,figsize = (num_pic,num_pic))
 plt.imshow(pic_input, cmap = 'gray')
 
-plt.figure(2,figsize = (n,n))
+plt.figure(2,figsize = (num_pic,num_pic))
 plt.imshow(pic_output, cmap = 'gray')
 
 plt.show()
